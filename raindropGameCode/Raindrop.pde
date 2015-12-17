@@ -24,7 +24,7 @@ class Raindrop {
   }
     void reset () {
     loc.y=0;
-   loc.x = random(0,800); 
+   loc.x = random(0,1200); 
    vel = new PVector (0,1);
   } 
 }
