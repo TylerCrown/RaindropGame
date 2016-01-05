@@ -1,23 +1,17 @@
 
 class Raindrop {
   PVector loc, vel, accel;
-  float diam;
-  float hue, sat, bright, alpha;
+  float diam,score;
 
   Raindrop (float x, float y) {
-    diam = 20;
     loc= new PVector(x, y);
     vel= PVector.random2D();
     accel= new PVector (0, .1);
-    hue = random(360);
-    sat = random (70,90);
-    bright = random(80,100);
-    alpha = 80;
   }
   void display () {
     noStroke();
-fill(hue,sat,bright,alpha);
-ellipse(loc.x,loc.y,diam,diam);
+fill(51,0,0);
+ellipse(loc.x,loc.y,70,35);
   
   }
 
@@ -26,11 +20,15 @@ ellipse(loc.x,loc.y,diam,diam);
     loc.add(vel);
    
   }
-  boolean isInContactWith (PVector thing) {
-    return thing.dist(loc)<=diam/2;
+  boolean isInContactWith (Bucket b) {
+  if(loc.dist(b.loc) < diam/2 + b.diam/2){
+    return true;
+  }else{
+    return false;
   }
-    void reset (float x, float y) {
-   loc.set(x,y);
+  }
+    void reset (float x) {
+   loc.set(x,0);
    vel = PVector.random2D();
   } 
 }

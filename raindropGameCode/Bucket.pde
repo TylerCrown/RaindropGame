@@ -1,15 +1,14 @@
 class Bucket {
   PVector loc;
   float diam;
-  PImage buck;
-  
-  Bucket(float tDiam) {
-  tDiam = diam;
-  loc = new PVector(mouseX,mouseY);
+  PImage thompkins;
+
+  Bucket() {
+    loc = new PVector(mouseX, mouseY);
+    thompkins = loadImage("Thompkins.png");
+  }
+  void display () {
+
+    image(thompkins, mouseX-75, 550, 250, 250);
+  }
 }
-void display () {
-    buck = loadImage("BUCKET.jpg");
-   image(buck, mouseX, 730, 75,75);
-}
-}
-  
