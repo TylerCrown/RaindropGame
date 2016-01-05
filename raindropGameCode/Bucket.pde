@@ -8,7 +8,7 @@ class Bucket {
     thompkins = loadImage("Thompkins.png");
   }
   void display () {
-
-    image(thompkins, mouseX-75, 550, 250, 250);
+ rect(mouseX+50,550,50,50);
+    image(thompkins, mouseX-45, 490, 250, 250);
   }
 }

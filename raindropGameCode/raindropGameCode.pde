@@ -27,7 +27,7 @@ void draw() {
   r.fall();         //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
   r.display();      //display the raindrop
   if (r.isInContactWith(b)) {      //check to see if the raindrop is in contact with the point represented by the PVector called mouse
-    r.reset(random(width));                         //if it is, reset the raindrop
+    r.reset(random(0,500));                         //if it is, reset the raindrop
   }
   if (r.loc.y > height + r.diam/2) {     //check to see if the raindrop goes below the bottom of the screen
     r.reset(random(width));                           //if it does, reset the raindrop

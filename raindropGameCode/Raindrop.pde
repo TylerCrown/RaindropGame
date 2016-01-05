@@ -6,7 +6,7 @@ class Raindrop {
   Raindrop (float x, float y) {
     loc= new PVector(x, y);
     vel= PVector.random2D();
-    accel= new PVector (0, .1);
+    accel= new PVector (.4, .6);
   }
   void display () {
     noStroke();
