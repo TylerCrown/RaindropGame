@@ -9,6 +9,8 @@ class Bucket {
     thompkins = loadImage("Thompkins.png");
   }
   void display () {
-    image(thompkins, mouseX-80, 490, 250, 250);
+    imageMode(CENTER);
+    image(thompkins, mouseX, 490, 250, 250);
+    imageMode(CORNER);
   }
 }

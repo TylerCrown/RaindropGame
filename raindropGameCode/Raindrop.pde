@@ -18,7 +18,7 @@ class Raindrop {
     loc.add(vel);
   }
  boolean isInContactWith(PVector thing) {
-    if (thing.dist(loc) > height + diam/2) {
+    if (loc.dist(thing) <= 60) {
       return true;
     } else {
       return false;

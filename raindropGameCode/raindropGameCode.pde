@@ -22,7 +22,6 @@ void setup() {
 
 
 void draw() {
-  raindrop.add(new Raindrop(random(0,750),0));    //add a new Particle to the particles ArrayList
     image(jets, 0, 0, 1200, 800); 
     fill(145, 20, 0);
     text("JETS            BILLS 22", 50, 600, 300, 300);
@@ -35,7 +34,7 @@ void draw() {
     r.fall();         //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
     r.display(); //display the raindrop
     if (r.isInContactWith(mouse)) {      //check to see if the raindrop is in contact with the point represented by the PVector called mouse
-      r.reset(random(0, 750));     //if it is, reset the raindrop
+        r.reset(random(0,750));    //if it is, reset the raindrop
       score+=7;
     }
     if (r.loc.y > height + r.diam/2) {     //check to see if the raindrop goes below the bottom of the screen
@@ -44,7 +43,9 @@ void draw() {
 
     if (score>= 28) {
       background(0);
-      text("YOU BEAT THE BILLS 28-22! ON TO THE PLAYOFFS YOU GO!", 200, 500);
+      fill(0,255,0);
+      text("YOU BEAT THE BILLS 28-22!", 130, 250);
+      text("ON TO THE PLAYOFFS YOU GO!", 100,350);
       textSize(32);
     }
     }
