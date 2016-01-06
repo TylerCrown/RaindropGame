@@ -4,11 +4,11 @@ class Bucket {
   PImage thompkins;
 
   Bucket() {
-    loc = new PVector(mouseX, mouseY);
+  ellipse(mouseX-45,490,50,50);
+  loc = new PVector(mouseX,mouseY);
     thompkins = loadImage("Thompkins.png");
   }
   void display () {
- rect(mouseX+50,550,50,50);
-    image(thompkins, mouseX-45, 490, 250, 250);
+    image(thompkins, mouseX-80, 490, 250, 250);
   }
 }
