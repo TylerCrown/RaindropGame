@@ -17,16 +17,16 @@ class Raindrop {
     vel.add(accel);
     loc.add(vel);
   }
- boolean isInContactwith() {
-    if (loc.y > height + diam/2) {
+ boolean isInContactWith(PVector thing) {
+    if (thing.dist(loc) > height + diam/2) {
       return true;
     } else {
       return false;
     }
   }
 
-  void reset(float x, float y) {
-    loc.set(x, y);
+  void reset(float x) {
+    loc.set(x, 0);
     vel = PVector.random2D();
   }
 }

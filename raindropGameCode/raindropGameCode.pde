@@ -43,10 +43,9 @@ void draw() {
     }
 
     if (score>= 28) {
-      background(255);
-      text("YOU BEAT THE BILLS! ON TO THE PLAYOFFS YOU GO!", 400, 600);
+      background(0);
+      text("YOU BEAT THE BILLS 28-22! ON TO THE PLAYOFFS YOU GO!", 200, 500);
       textSize(32);
-      textAlign(CENTER);
     }
     }
 }
